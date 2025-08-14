@@ -1,0 +1,18 @@
+body{
+    font-family: "Poppins", sans-serif;;
+}
+
+
+/* barra de navegacion */
+.navbar-custom{
+    background-color: #ffff;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+/* carrusel */
+.carousel-item img {
+  width: 100%;         /* Mantener ancho total */
+  height: auto;        /* Altura automática según proporción */
+  max-height: 500px;   /* Límite máximo de alto */
+}
+
