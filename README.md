@@ -37,9 +37,3 @@ Luego abre `index.html` en tu navegador.
 
 ⏳ **En progreso** — Todavía estoy añadiendo secciones, mejorando estilos y ajustando detalles.
 
----
-
-Si quieres, puedo añadirle una **nota final motivadora** para que cuando lo subas a GitHub se note que es un trabajo de aprendizaje y pasión.
-Por ejemplo:
-
-> *"Cada línea de código en este proyecto es un paso más en mi camino como desarrollador. No es perfecto, pero está hecho con dedicación."*
