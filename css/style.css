@@ -1,18 +1,26 @@
-body{
-    font-family: "Poppins", sans-serif;;
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
 
 /* barra de navegacion */
-.navbar-custom{
-    background-color: #ffff;
-    border-bottom: 2px solid #f4f4f4;
+.navbar {
+  z-index: 1;
+  width: 100%;
 }
 
-/* carrusel */
-.carousel-item img {
-  width: 100%;         /* Mantener ancho total */
-  height: auto;        /* Altura automática según proporción */
-  max-height: 500px;   /* Límite máximo de alto */
+section {
+  margin-top: 100px;
 }
 
+.contenedor {
+  padding: 10px;
+  display: flex;
+  width: 500px;
+}
+
+.posicion-icons {
+  margin-left: 50px;
+}
