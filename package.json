@@ -1,16 +1,23 @@
 {
-  "name": "sitio-web",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "sitio-bootstrap",
+  "version": "1.1.0",
+  "description": "Nebularspell — sitio web responsivo con Bootstrap 5 (proyecto personal).",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx --yes http-server -p 8080 -c-1 .",
+    "format": "npx --yes prettier --write \"**/*.{html,css,md}\""
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "bootstrap",
+    "html",
+    "css",
+    "responsive",
+    "personal"
+  ],
+  "author": "BinaryBeginner",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.3.7",
+    "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1"
   }
 }

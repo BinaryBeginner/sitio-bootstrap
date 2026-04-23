@@ -1,25 +1,279 @@
+/* ============================================================
+   Nebularspell — estilos propios
+   Paleta inspirada en comida saludable: verdes + tierra suaves.
+   Se apoya en Bootstrap 5 y sobreescribe variables puntuales.
+   ============================================================ */
+
+:root {
+  --brand: #2e7d4f;
+  --brand-dark: #1f5c3a;
+  --brand-soft: #e8f3ec;
+  --surface: #fafaf7;
+  --ink: #1e2b22;
+
+  --bs-body-bg: var(--surface);
+  --bs-body-color: var(--ink);
+  --bs-body-font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --bs-success: var(--brand);
+  --bs-success-rgb: 46, 125, 79;
+  --bs-link-color: var(--brand);
+  --bs-link-color-rgb: 46, 125, 79;
+  --bs-link-hover-color: var(--brand-dark);
+
+  --bs-border-radius: 0.6rem;
+  --bs-border-radius-lg: 1rem;
+  --bs-border-radius-xl: 1.25rem;
+}
+
+/* overrides de color para componentes de Bootstrap */
+.btn-success {
+  --bs-btn-bg: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-bg: var(--brand-dark);
+  --bs-btn-hover-border-color: var(--brand-dark);
+  --bs-btn-active-bg: var(--brand-dark);
+  --bs-btn-active-border-color: var(--brand-dark);
+}
+
+.btn-outline-success {
+  --bs-btn-color: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-bg: var(--brand);
+  --bs-btn-hover-border-color: var(--brand);
+  --bs-btn-active-bg: var(--brand);
+  --bs-btn-active-border-color: var(--brand);
+}
+
+.bg-success-subtle {
+  background-color: var(--brand-soft) !important;
+}
+
+.text-success {
+  color: var(--brand) !important;
+}
+
+/* Base */
 body {
-  font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* barra de navegacion */
-.navbar {
-  width: 100%;
-}
-
-section {
-  margin-top: 100px;
-}
-
-.contenedor {
-  padding: 10px;
+  min-height: 100vh;
   display: flex;
-  width: 500px;
+  flex-direction: column;
 }
 
-.posicion-icons {
-  margin-left: 50px;
+main {
+  flex: 1 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.letter-spaced {
+  letter-spacing: 0.12em;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1080;
+  padding: 0.5rem 1rem;
+  background: var(--brand);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0 0 0.5rem 0;
+}
+
+/* Navbar */
+.nav-blur {
+  background-color: rgba(250, 250, 247, 0.88);
+  backdrop-filter: saturate(140%) blur(10px);
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar .navbar-brand {
+  font-size: 1.25rem;
+  color: var(--ink);
+}
+
+.navbar .nav-link {
+  color: var(--ink);
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-visible {
+  color: var(--brand);
+  background-color: var(--brand-soft);
+}
+
+/* Hero */
+.hero {
+  min-height: 72vh;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(46, 125, 79, 0.12), transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(46, 125, 79, 0.10), transparent 50%),
+    var(--surface);
+}
+
+.hero h1 {
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.hero .lead {
+  max-width: 46ch;
+}
+
+/* Ilustración hero */
+.hero-art {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-soft), #d4ead9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(46, 125, 79, 0.15);
+}
+
+.hero-art i {
+  font-size: 8rem;
+  color: var(--brand);
+}
+
+/* Features */
+.feature {
+  border-radius: var(--bs-border-radius-lg);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  color: var(--brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+/* Productos */
+.product-card {
+  border-radius: var(--bs-border-radius-lg);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #fff;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.product-img-wrap {
+  aspect-ratio: 4 / 3;
+  background: var(--brand-soft);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-img-wrap img {
+  transform: scale(1.04);
+}
+
+/* Carrusel */
+.carousel img {
+  object-fit: cover;
+  max-height: 420px;
+}
+
+/* Newsletter */
+.newsletter {
+  background: linear-gradient(135deg, var(--brand-soft) 0%, #d4ead9 100%);
+  border: 1px solid rgba(46, 125, 79, 0.15);
+}
+
+/* Footer */
+.footer {
+  background-color: #f3f3ee;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-link {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.15rem 0;
+  transition: color 0.15s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+  color: var(--brand);
+}
+
+.social-link {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  background-color: var(--brand);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Foco accesible global */
+:focus-visible {
+  outline: 3px solid rgba(46, 125, 79, 0.45);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+/* Responsive afinado */
+@media (max-width: 991.98px) {
+  .hero {
+    min-height: auto;
+    padding-top: 7rem;
+  }
+
+  .navbar-collapse {
+    padding-top: 0.5rem;
+  }
 }

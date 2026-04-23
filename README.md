@@ -1,39 +1,58 @@
-# 🌿 Nebularspell — Sitio Web Responsivo con Bootstrap *(En desarrollo)*
+# 🌿 Nebularspell — Sitio Web Responsivo con Bootstrap
 
-Este es un proyecto personal que estoy construyendo con **Bootstrap 5**.
-Su objetivo principal es **practicar, aprender y reforzar tecnologías** que ya he estudiado, asegurando que no las olvide mientras sigo mejorando mis habilidades.
+Proyecto personal construido con **Bootstrap 5** cuyo objetivo es practicar, aprender y reforzar tecnologías web. La temática se centra en comida saludable con una estética minimalista.
 
-Actualmente, el sitio se inspira en una estética minimalista y visualmente atractiva, con temática centrada en comida saludable.
+## ✨ Características
 
-## ✨ Características (actuales y planeadas)
-
-* 📱 **Diseño responsivo** — Adaptable a cualquier dispositivo.
-* 🎯 **Bootstrap 5** — Construcción rápida y eficiente.
-* 📷 **Carrusel de imágenes** — Para destacar recetas o productos.
-* 🍞 **Menú minimalista** — Con icono hamburguesa.
-* 🔜 **Secciones adicionales** — Contenido y estilos que iré añadiendo.
+- 📱 **Diseño responsivo** — Se adapta a móvil, tablet y escritorio.
+- 🎯 **Bootstrap 5** — Sistema de grillas, utilidades y componentes.
+- 🧩 **Componentes** — Navbar con buscador, carrusel, cards de producto, newsletter, footer.
+- ♿ **Accesibilidad básica** — HTML semántico, `skip link`, `aria-label` en iconos, foco visible.
+- 🔎 **SEO básico** — Meta description, Open Graph y Twitter Card.
+- 🎨 **Paleta propia** — Verdes/tierra con variables CSS que sobrescriben Bootstrap.
 
 ## 🛠️ Tecnologías
 
-* HTML5
-* CSS3
-* Bootstrap 5
-* JavaScript (componentes de Bootstrap)
-
-## 📸 Vista previa
-
-<img width="785" height="664" alt="image" src="https://github.com/user-attachments/assets/986680de-47c7-46af-a5c2-7508a664bb6b" />
-
+- HTML5
+- CSS3 (variables y `@media` queries)
+- Bootstrap 5 + Bootstrap Icons (vía CDN con SRI)
+- Tipografía **Poppins** (Google Fonts)
 
 ## 🚀 Cómo verlo
 
 ```bash
-git clone https://github.com/usuario/nombre-repositorio.git
+git clone https://github.com/BinaryBeginner/sitio-bootstrap.git
+cd sitio-bootstrap
 ```
 
-Luego abre `index.html` en tu navegador.
+Opción 1 — abrir directamente en el navegador:
 
-## 📄 Estado del proyecto
+```bash
+xdg-open index.html      # Linux
+open index.html          # macOS
+start index.html         # Windows
+```
 
-⏳ **En progreso** — Todavía estoy añadiendo secciones, mejorando estilos y ajustando detalles.
+Opción 2 — servidor local estático (recomendado):
 
+```bash
+npm start                # levanta http-server en http://localhost:8080
+```
+
+> Las dependencias se cargan desde CDN; `npm install` es opcional y sólo es útil para trabajar offline.
+
+## 📁 Estructura
+
+```
+.
+├── assets/             # imágenes (webp)
+├── css/
+│   └── style.css       # estilos propios + overrides de Bootstrap
+├── index.html
+├── package.json
+└── README.md
+```
+
+## 📄 Estado
+
+⏳ **En progreso** — se seguirán añadiendo secciones (detalle de producto, carrito, recetas).
